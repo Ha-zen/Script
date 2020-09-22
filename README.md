@@ -12,3 +12,7 @@ attack
 defense 
 fore and seek 
 admin
+
+Sites utilisés :
+- https://aplicacionesysistemas.com/en/dialog-crear-menus-tus-scripts/
+- https://bash.cyberciti.biz/guide/Bash_display_dialog_boxes
