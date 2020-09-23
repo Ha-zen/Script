@@ -11,9 +11,4 @@
 #trap "rm -f $tmp_file" 0 1 2 5 15
 
 
-dialog --title "Installation" --checklist "test" 0 0 0 \
-    1 Attack off \
-    2 Defense on \
-    3 Forensic off \
-    4 Admin off \
-    5 Anonym
+dialog --title "Installation" --checklist "test" 0 0 0  1 Attack off 2 Defense off 3 Forensic off 4 Admin off 5 Anonym off
