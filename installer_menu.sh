@@ -11,6 +11,20 @@
 #trap "rm -f $tmp_file" 0 1 2 5 15
 
 
-dialog --title "Installation" --checklist "test" 0 0 0  1 Attack off 2 Defense off 3 Forensic off 4 Admin off 5 Anonym off
+# dialog --title "Installation" --checklist "test" 0 0 0  1 Attack 2 Defense 3 Forensic 4 Admin 5 Anonym
 
-dialog --title " Menu! " --column-separator "|" --checklist "" 0 0 0 "1" "INFO|INSTALLE|CONTENEURISE|LANCE|BOOT" "2" "Option|Two" "3" "Option|Three" "4" "Option|Four"
+# dialog --title "Menu! " --column-separator "|" --menu "" 0 0 0 "1" "INFO|INSTALLE|CONTENEURISE|LANCE|BOOT" "2" "Option|Two" "3" "Option|Three" "4" "Option|Four"
+
+
+# dialog --checklist "Select:" 0 0 5 \
+#   1 "First element" off \
+#   2 "Second element" off \
+#   3 "Third element" off
+
+  dialog --title " Welcome to My Menu! " \
+       --column-separator "|"          \
+       --menu "" 6 0 0              \
+               "1" "Option One | 1-2 buckle my shoe"        \
+               "2" "Option Two | Old MacDonald had a farm"        \
+               "3" "Option Three | Jack and Jill went up a hill"      \
+               "4" "Option Four | Old King Cole was a merry old soul"       \
