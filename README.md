@@ -17,3 +17,9 @@ Sites utilisés :
 - https://aplicacionesysistemas.com/en/dialog-crear-menus-tus-scripts/
 - https://bash.cyberciti.biz/guide/Bash_display_dialog_boxes
 - https://askubuntu.com/questions/25077/how-to-really-clear-the-terminal
+
+Accès Kali :
+
+https://sshpve.nateacloud.fr/
+id : mtimoteo
+mdp : Insta2020.
