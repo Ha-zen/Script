@@ -12,3 +12,5 @@
 
 
 dialog --title "Installation" --checklist "test" 0 0 0  1 Attack off 2 Defense off 3 Forensic off 4 Admin off 5 Anonym off
+
+dialog --title " Menu! " --column-separator "|" --checklist "" 0 0 0 "1" "INFO|INSTALLE|CONTENEURISE|LANCE|BOOT" "2" "Option|Two" "3" "Option|Three" "4" "Option|Four"
