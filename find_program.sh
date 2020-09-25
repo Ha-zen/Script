@@ -9,5 +9,5 @@
 #     # liste=(${value})  
 # done
 # echo ${liste[@]}
-array=(one two three four)
-echo ${array[0]}
+array=( one two three four )
+echo ${array[@]}
