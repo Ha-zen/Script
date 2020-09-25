@@ -11,15 +11,26 @@
 #trap "rm -f $tmp_file" 0 1 2 5 15
 
 
+
+
+declare -a liste=( "openssh-server" "sudo" )
+# dpkg-query -W -f='${Status}' $liste
+# dpkg-query -W -f='${Status}' $liste | grep -q -P '^install ok installed$'; echo $?
+
+for pkg in ${liste[@]}; do
+    dpkg-query -W -f='${Status}' $pkg 
+
+done
+
+dialog --checklist "Select:" 0 0 5 \
+  1 "sudo" $on  \
+  2 "openssh-server" off \
+  3 "Third element" off
+
 # dialog --title "Installation" --checklist "test" 0 0 0  1 Attack 2 Defense 3 Forensic 4 Admin 5 Anonym
 
 # dialog --title "Menu! " --column-separator "|" --menu "" 0 0 0 "1" "INFO|INSTALLE|CONTENEURISE|LANCE|BOOT" "2" "Option|Two" "3" "Option|Three" "4" "Option|Four"
 
-
-dialog --checklist "Select:" 0 0 5 \
-  1 "First element" on \
-  2 "Second element" off \
-  3 "Third element" off
 
   # dialog --title " Welcome to My Menu! " \
   #      --column-separator "|"          \
