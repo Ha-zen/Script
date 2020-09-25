@@ -16,17 +16,17 @@
 # dialog --title "Menu! " --column-separator "|" --menu "" 0 0 0 "1" "INFO|INSTALLE|CONTENEURISE|LANCE|BOOT" "2" "Option|Two" "3" "Option|Three" "4" "Option|Four"
 
 
-# dialog --checklist "Select:" 0 0 5 \
-#   1 "First element" off \
-#   2 "Second element" off \
-#   3 "Third element" off
+dialog --checklist "Select:" 0 0 5 \
+  1 "First element" off \
+  2 "Second element" off \
+  3 "Third element" off
 
-  dialog --title " Welcome to My Menu! " \
-       --column-separator "|"          \
-       --menu "" 6 0 0              \
-               "1" "Option One | 1-2 buckle my shoe"        \
-               "2" "Option Two | Old MacDonald had a farm"        \
-               "3" "Option Three | Jack and Jill went up a hill"      \
-               "4" "Option Four | Old King Cole was a merry old soul"       \
+  # dialog --title " Welcome to My Menu! " \
+  #      --column-separator "|"          \
+  #      --menu "" 6 0 0              \
+  #              "1" "Option One | 1-2 buckle my shoe"        \
+  #              "2" "Option Two | Old MacDonald had a farm"        \
+  #              "3" "Option Three | Jack and Jill went up a hill"      \
+  #              "4" "Option Four | Old King Cole was a merry old soul"       \
 
   
