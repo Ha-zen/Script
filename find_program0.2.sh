@@ -7,4 +7,4 @@ declare -a liste=( "ssh" "nmap" )
 for pkg in ${liste[@]}; do
     echo ${pkg}  
 done
-echo ${liste[@]}
+# echo ${liste[@]}
