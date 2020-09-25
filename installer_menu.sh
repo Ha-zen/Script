@@ -17,7 +17,7 @@
 
 
 dialog --checklist "Select:" 0 0 5 \
-  1 "First element" off \
+  1 "First element" on \
   2 "Second element" off \
   3 "Third element" off
 
