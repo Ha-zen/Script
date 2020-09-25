@@ -13,24 +13,24 @@
 
 
 
-declare -a liste=( "openssh-server" "sudo" )
+# declare -a liste=( "openssh-server" "sudo" )
 # dpkg-query -W -f='${Status}' $liste
 
 
-for pkg in ${liste[@]}; do
-    dpkg-query -W -f='${Status}' $pkg | grep -q -P '^install ok installed$'; echo $? 
+# for pkg in ${liste[@]}; do
+#     dpkg-query -W -f='${Status}' $pkg | grep -q -P '^install ok installed$'; echo $? 
 
-if [$? == 0]
-  $onoff="on"
-  else
-  $onoff="off"
+# if [$? == 0]
+#   $onoff="on"
+#   else
+#   $onoff="off"
 
-dialog --checklist "Select:" 10 50 5 \
-  1 "sudo" $onoff  \
-  2 "openssh-server" off \
-  3 "Third element" off
+# dialog --checklist "Select:" 10 50 5 \
+#   1 "sudo" $onoff  \
+#   2 "openssh-server" off \
+#   3 "Third element" off
 
-done
+# done
 
 whiptail --title "titre" --infobox "Ceci est un message" 8 78
 
