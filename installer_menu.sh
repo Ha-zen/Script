@@ -13,31 +13,39 @@
 
 
 
-declare -a liste=( "openssh-server" "sudo" )
+# declare -a liste=( "openssh-server" "sudo" )
 # dpkg-query -W -f='${Status}' $liste
-# dpkg-query -W -f='${Status}' $liste | grep -q -P '^install ok installed$'; echo $?
 
-for pkg in ${liste[@]}; do
-    dpkg-query -W -f='${Status}' $pkg 
 
-done
+# for pkg in ${liste[@]}; do
+#     dpkg-query -W -f='${Status}' $pkg | grep -q -P '^install ok installed$'; echo $? 
 
-dialog --checklist "Select:" 0 0 5 \
-  1 "sudo" $on  \
-  2 "openssh-server" off \
-  3 "Third element" off
+# if [$? == 0]
+#   $onoff="on"
+#   else
+#   $onoff="off"
+
+# dialog --checklist "Select:" 10 50 5 \
+#   1 "sudo" $onoff  \
+#   2 "openssh-server" off \
+#   3 "Third element" off
+
+# done
+
+
+
+
 
 # dialog --title "Installation" --checklist "test" 0 0 0  1 Attack 2 Defense 3 Forensic 4 Admin 5 Anonym
 
 # dialog --title "Menu! " --column-separator "|" --menu "" 0 0 0 "1" "INFO|INSTALLE|CONTENEURISE|LANCE|BOOT" "2" "Option|Two" "3" "Option|Three" "4" "Option|Four"
 
 
-  # dialog --title " Welcome to My Menu! " \
-  #      --column-separator "|"          \
-  #      --menu "" 6 0 0              \
-  #              "1" "Option One | 1-2 buckle my shoe"        \
-  #              "2" "Option Two | Old MacDonald had a farm"        \
-  #              "3" "Option Three | Jack and Jill went up a hill"      \
-  #              "4" "Option Four | Old King Cole was a merry old soul"       \
-
+dialog --title " Welcome to My Menu! " \
+      --column-separator "|"          \
+      --checklist "" 6 0 0              \
+              "1" "Option One | 1-2 buckle my shoe"        \
+              "2" "Option Two | Old MacDonald had a farm"        \
+              "3" "Option Three | Jack and Jill went up a hill"      \
+              "4" "Option Four | Old King Cole was a merry old soul"       \
   
