@@ -32,7 +32,7 @@ dialog --checklist "Select:" 10 50 5 \
 
 done
 
-
+whiptail --title "titre" --infobox "Ceci est un message" 8 78
 
 
 
