@@ -1,10 +1,10 @@
 #!/bin/bash/
 # IFS=
 declare -a liste=( "ssh" "nmap" )
-#dpkg-query -W -f='${Status}' $liste | grep -q -P '^install ok installed$'; echo $?
+# dpkg-query -W -f='${Status}' $liste
 
 
 for pkg in ${liste[@]}; do
-    echo ${pkg}  
+    dpkg-query -W -f='${Status}' $pkg  
 done
 # echo ${liste[@]}
