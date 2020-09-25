@@ -26,3 +26,9 @@ mdp : Insta2020.
 Realme : Proxmox VE Authentication Server
 
 Credentials VMs : id : romain mdp : natea
+
+Check if package is installed or not.
+https://stackoverflow.com/questions/1298066/check-if-an-apt-get-package-is-installed-and-then-install-it-if-its-not-on-linu
+
+
+dpkg-query -W -f='${Status}' nmap | grep -q -P '^install ok installed$'; echo $?
