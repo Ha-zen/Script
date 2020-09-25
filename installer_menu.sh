@@ -32,7 +32,7 @@
 
 # done
 
-whiptail --title "titre" --infobox "Ceci est un message" 8 78
+
 
 
 
