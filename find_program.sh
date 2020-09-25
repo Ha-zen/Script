@@ -1,6 +1,6 @@
 #!/bin/bash/
 # IFS=
-liste=("ssh" "nmap")
+# declare -a liste=( "ssh" "nmap" )
 # dpkg-query -W -f='${Status}' $liste | grep -q -P '^install ok installed$'; echo $?
 # T=$(ps -el | awk '{print $14}' | awk 'NR>2')
 # # echo "${T}"
@@ -8,4 +8,6 @@ liste=("ssh" "nmap")
 #     do echo "${value}"
 #     # liste=(${value})  
 # done
-echo "${liste[@]}"
+# echo ${liste[@]}
+array=(one two three four)
+echo ${array[0]}
