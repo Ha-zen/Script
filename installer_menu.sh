@@ -25,10 +25,10 @@
 #   else
 #   $onoff="off"
 
-# dialog --checklist "Select:" 10 50 5 \
-#   1 "sudo" $onoff  \
-#   2 "openssh-server" off \
-#   3 "Third element" off
+dialog --checklist "Select:" 10 50 5 \
+  1 "sudo" $onoff  \
+  2 "openssh-server" off \
+  3 "Third element" off
 
 # done
 
