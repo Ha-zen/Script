@@ -42,10 +42,10 @@ whiptail --title "titre" --infobox "Ceci est un message" 8 78
 
 
 # dialog --title " Welcome to My Menu! " \
-      --column-separator "|"          \
-      --checklist "" 6 0 0              \
-              "1" "Option One | 1-2 buckle my shoe"        \
-              "2" "Option Two | Old MacDonald had a farm"        \
-              "3" "Option Three | Jack and Jill went up a hill"      \
-              "4" "Option Four | Old King Cole was a merry old soul"       \
+      # --column-separator "|"          \
+      # --checklist "" 6 0 0              \
+      #         "1" "Option One | 1-2 buckle my shoe"        \
+      #         "2" "Option Two | Old MacDonald had a farm"        \
+      #         "3" "Option Three | Jack and Jill went up a hill"      \
+      #         "4" "Option Four | Old King Cole was a merry old soul"       \
   
