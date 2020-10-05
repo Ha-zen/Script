@@ -5,7 +5,8 @@ declare -a liste=( "openssh-server" "sudo" )
 
 
 for pkg in ${liste[@]}; do
-    echo $liste[@] 
+    i=$(($liste + 1))
+    echo $liste
     dpkg-query -W -f='${version} - ${Status}\n' $pkg
 done
 
