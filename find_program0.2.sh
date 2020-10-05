@@ -8,8 +8,6 @@ for pkg in ${liste[@]}; do
     check_pkg
     if ["${check_pkg}" == "install ok installed"]; then
     echo "$pkg est déjà installé"
-    
-
 done
 
     # else
