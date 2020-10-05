@@ -9,7 +9,7 @@ for pkg in ${liste[@]}; do
     check_pkg=$(printf "$pkg" && dpkg-query -W -f=' - ${version} - ${Status}\n' $pkg)
 
     
-    if [ "${check_pkg}" == "install ok installed" ]; then
+    if [ "${check_pkg}" = "install ok installed" ]; then
     
     echo "$pkg est déjà installé"
     else
