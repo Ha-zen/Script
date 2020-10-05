@@ -1,6 +1,6 @@
 #!/bin/bash/
 # IFS=
-declare -a liste=( "openssh-server" "sudo" )
+declare -a liste=( "openssh-server" "sudo" "nessus" )
 # dpkg-query -W -f='${Status}' $liste
 
 
