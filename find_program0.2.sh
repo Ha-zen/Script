@@ -6,13 +6,14 @@ declare -a liste=( "openssh-server" "sudo" "nessus" )
 # grep "install ok installed"
 for pkg in ${liste[@]}; do
     
-    check_pkg=$(dpkg-query -W -f='${Status}\n' $pkg | awk '{print $3}' )
-    version_pkg=$(dpkg-query -W -f=' - ${version}' $pkg)
+    check_pkg=$(dpkg-query -W -f='${Status}\n' $pkg | awk '{print $3}' 2&1>/dev/null )
+    version_pkg=$(dpkg-query -W -f=' - ${version}' $pkg 2&1>/dev/null)
     # echo $check_pkg
     
     if [ "${check_pkg}" == "installed" ]; then
         echo -e "$pkg $version_pkg est déjà installé"
     else
+        
         echo "$pkg n'est pas installé"
     fi
 done
