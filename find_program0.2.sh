@@ -9,9 +9,9 @@ for pkg in ${liste[@]}; do
     check_pkg=$(printf "$pkg" && dpkg-query -W -f='${Status}\n' $pkg | awk '{print $3}' )
 
     
-    if [ "${check_pkg}" == "installed" ]; then
+    if [ ${check_pkg} == "installed" ]; then
     
-    echo -e '$pkg && dpkg-query -W -f=' - ${version}' est déjà installé'
+    echo -e $pkg && dpkg-query -W -f=' - ${version}' && echo "est déjà installé"
     else
     echo "$pkg n'est pas installé"
     fi
