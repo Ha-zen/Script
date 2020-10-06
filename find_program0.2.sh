@@ -16,8 +16,7 @@ for pkg in ${liste[@]}; do
     # else
     # echo "$pkg n'est pas installé"
     # fi
-    # done
-    
+    done
 # else
     
 # echo "$pkg n'est pas installé"
