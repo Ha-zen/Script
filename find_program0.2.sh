@@ -24,10 +24,12 @@ for pkg in ${liste[@]}; do
         liste_pkg_pas_ok=( "$pkg" )
     fi
 
-    echo -e "$liste_pkg_ok est ok"
-    echo "$liste_pkg_pas_ok n'est PAS ok"
+    
 
 done
+
+echo -e "$liste_pkg_ok est ok"
+echo "$liste_pkg_pas_ok n'est PAS ok"
 # else
     
 # echo "$pkg n'est pas installé"
