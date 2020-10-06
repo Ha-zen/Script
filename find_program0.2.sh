@@ -10,7 +10,7 @@ for pkg in ${liste[@]}; do
     version_pkg=$(dpkg-query -W -f=' - ${version}' $pkg)
     # echo $check_pkg
     
-    if [ ${check_pkg} == "installed" ]; then
+    if [ "${check_pkg}" == "installed" ]; then
     
     echo -e "$pkg $version_pkg est déjà installé"
     else
