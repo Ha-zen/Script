@@ -11,12 +11,11 @@ for pkg in ${liste[@]}; do
     # echo $check_pkg
     
     if [ "${check_pkg}" == "installed" ]; then
-    
-    echo -e "$pkg $version_pkg est déjà installé"
+        echo -e "$pkg $version_pkg est déjà installé"
     else
-    echo "$pkg n'est pas installé"
+        echo "$pkg n'est pas installé"
     fi
-    done
+done
 # else
     
 # echo "$pkg n'est pas installé"
