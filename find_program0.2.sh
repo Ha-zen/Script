@@ -10,17 +10,38 @@ for pkg in ${liste[@]}; do
     version_pkg=$(dpkg-query -W -f=' - ${version}' $pkg 2>/dev/null )
     # echo $check_pkg
     
-    if [ "${check_pkg}" == "installed" ]; then
-        echo -e "$pkg $version_pkg est déjà installé"
-    else
-        echo "$pkg n'est pas installé"
-    fi
-
-    # if [ "${check_pkg}" != "installed" ]; then
+    # if [ "${check_pkg}" == "installed" ]; then
+    #     echo -e "$pkg $version_pkg  est déjà installé"
+    # else
     #     echo "$pkg n'est pas installé"
     # fi
+
+    liste_pkg_ok=()
+    liste_pkg_pas_ok=()
+    if [ "${check_pkg}" == "installed" ]; then
+        liste_pkg_ok=( $pkg $version_pkg )
+    else
+        liste_pkg_pas_ok=( $pkg )
+    fi
+
+    echo ${liste_pkg_ok}
+    echo ${liste_pkg_pas_ok} 
+
 done
 # else
     
 # echo "$pkg n'est pas installé"
 # echo ${liste[@]}
+
+
+
+# liste_pkg_ok=()
+# liste_pkg_pas_ok=()
+#     if [ "${check_pkg}" == "installed" ]; then
+#         liste_pkg_ok=( $pkg $version_pkg )
+#     else
+#         liste_pkg_pas_ok=( $pkg )
+#     fi
+
+#     echo ${liste_pkg_ok}
+#     echo ${liste_pkg_pas_ok} 
