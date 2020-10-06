@@ -10,4 +10,13 @@
 # done
 # echo ${liste[@]}
 
-whiptail --title "titre" --infobox "Ceci est un message" 8 78
+# whiptail --title "titre" --infobox "Ceci est un message" 8 78
+
+check_pkg="installed"
+
+if [ ${check_pkg} == "installed" ]; then
+    
+    echo "est déjà installé"
+    else
+    echo " n'est pas installé"
+    fi
