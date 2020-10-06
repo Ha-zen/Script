@@ -24,7 +24,7 @@ for pkg in ${liste[@]}; do
         liste_pkg_pas_ok=( "$pkg" )
     fi
 
-    echo -e "$liste_pkg_ok est ok"
+    echo -e "$liste_pkg_ok"
 
 done
 
