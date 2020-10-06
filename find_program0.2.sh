@@ -6,7 +6,7 @@ declare -a liste=( "openssh-server" "sudo" "nessus" )
 
 for pkg in ${liste[@]}; do
     
-    check_pkg=$(printf "$pkg" && dpkg-query -W -f=' - ${version} - ${Status}\n' $pkg | grep "install ok installed")
+    check_pkg=$(printf "$pkg" && dpkg-query -W -f=' - ${version} - ${Status}\n' $pkg | grep "..install ok installed")
 
     
     if [ "${check_pkg}" = "install ok installed" ]; then
@@ -15,7 +15,7 @@ for pkg in ${liste[@]}; do
     else
      echo "$pkg n'est pas installé"  
     fi
-done
+    done
 # else
     
 # echo "$pkg n'est pas installé"
