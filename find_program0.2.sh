@@ -19,7 +19,7 @@ for pkg in ${liste[@]}; do
     liste_pkg_ok=()
     liste_pkg_pas_ok=()
     if [ "${check_pkg}" == "installed" ]; then
-        liste_pkg_ok=( "$pkg" "$version_pkg" )
+        liste_pkg_ok=( "$pkg $version_pkg" )
     else
         liste_pkg_pas_ok=( "$pkg" )
     fi
