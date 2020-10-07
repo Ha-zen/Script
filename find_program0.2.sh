@@ -2,6 +2,7 @@
 # IFS=
 declare -a liste=( "openssh-server" "sudo" "sed" "nessus" "docker" )
 vide=()
+liste_pkg=()
 liste_pkg_ok=()
 liste_pkg_pas_ok=()
 # dpkg-query -W -f='${Status}' $liste
