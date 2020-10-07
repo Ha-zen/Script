@@ -1,22 +1,20 @@
 #!/bin/bash/
-# IFS=
-#declare -a liste=( "ssh" "nmap" )
-#dpkg-query -W -f='${Status}' $liste | grep -q -P '^install ok installed$'; echo $?
-# T=$(ps -el | awk '{print $14}' | awk 'NR>2')
-# # echo "${T}"
-# for value in ${T}
-#     do echo "${value}"
-#     # liste=(${value})  
-# done
-# echo ${liste[@]}
 
-# whiptail --title "titre" --infobox "Ceci est un message" 8 78
+declare -a liste=( "openssh-server" "sudo" "sed" "nessus" "docker" )
 
-check_pkg="installed"
-
-if [ ${check_pkg} == "installed" ]; then
+for pkg in ${liste[@]}; do
     
-    echo "est déjà installé"
+    check_pkg=$(dpkg-query -W -f='${Status}' $pkg 2>/dev/null | awk '{print $3}' )
+    version_pkg=$(dpkg-query -W -f=' - ${version}' $pkg 2>/dev/null )
+
+    echo Checking for $pkg: $check_pkg
+
+    if [ "${pkg_ok}" == "installed" ]; then
+
+        echo -e "No need to install $pkg $(dpkg-query -W -f='- ${version}' $pkg)" >> installed_pkg
+
     else
-    echo " n'est pas installé"
+        echo " Install le PUTAIN de $pkg" >> non_installed_pkg
+
     fi
+done

@@ -19,7 +19,7 @@ for pkg in ${liste[@]}; do
     # else
     #     echo "$pkg n'est pas installé"
     # fi
-
+   
     if [ "${check_pkg}" == "installed" ]; then
         liste_pkg_ok=( "$pkg" )
         # liste_pkg_ok=( "$pkg $version_pkg" )
@@ -34,11 +34,13 @@ for pkg in ${liste[@]}; do
     
     for ((i=0; i<${liste_pkg_ok[*]}; ++i ))
     do
-        echo ${liste_pkg_ok[$i]} >> list
+        echo ${liste_pkg_ok[$i]} >> fil
     done
 
 done
 echo -e "$liste_pkg_ok 2"
+
+
 # efface les valeurs vide dans la liste $liste_pkg_pas_ok
 # for target in "${vide[@]}"; do
 #   for i in "${!liste_pkg_pas_ok[@]}"; do
