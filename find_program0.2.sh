@@ -24,7 +24,9 @@ for pkg in ${liste[@]}; do
         liste_pkg_pas_ok=( "$pkg" )
     fi
 
-    echo -e "$liste_pkg_pas_ok"
+    # echo -e "$liste_pkg_pas_ok"
+    echo "${(j./.)liste_pkg_pas_ok:#}"
+
 done
 
 
