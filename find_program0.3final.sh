@@ -9,7 +9,7 @@ for pkg in ${liste[@]}; do
 
     echo Checking for $pkg: $check_pkg
 
-    if [ "${pkg_ok}" == "installed" ]; then
+    if [ "${check_pkg}" == "installed" ]; then
 
         echo -e "No need to install $pkg $(dpkg-query -W -f='- ${version}' $pkg)" >> installed_pkg
 
