@@ -3,7 +3,7 @@
 DIALOG_CANCEL=1
 DIALOG_ESC=255
 
-
+> tmp.txt
 
 dialog --title "Programme-TP" \
 	--msgbox "Bonjour, le programme suivant a pour fonction taratata..." 0 0
@@ -24,8 +24,9 @@ while true; do
 	exit_status=$?
 	exec 3>&-
 	case $exit_status in $DIALOG_CANCEL)
+   fin=$(cat ./tmp.txt)
 		dialog --title "FIN_Programme-TP" \
-	--msgbox "Programme Fini" 0 0
+	--msgbox "$fin" 0 0
     clear
 		#echo "Program terminated."
 		exit
@@ -43,6 +44,7 @@ while true; do
       echo "Program terminated."
       ;;
     1 )
+      echo "Cat1 prog1" >> tmp.txt
       fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 trap "rm -f $fichtemp" 0 1 2 5 15
 dialog --clear --title "Mon chanteur franÃ§ais favori" \
@@ -63,14 +65,17 @@ case $valret in
 esac
       ;;
     2 )
-      dialog --title "Programme-TP1.1" \
+    echo "Cat1 prog2" >> tmp.txt
+      dialog --title "Programme-TP1.2" \
 	--msgbox "blablabla" 0 0
       ;;
     3 )
+    echo "Cat2 prog1" >> tmp.txt
     dialog --title "Programme-TP2.1_reponse" \
 	--msgbox "blablabla" 0 0
       ;;
     4 )
+    echo "Cat2 prog2" >> tmp.txt
         dialog --title "Programme-TP2.2_reponse" \
 	--msgbox "blablabla" 0 0
   esac
