@@ -29,9 +29,12 @@ for pkg in ${liste[@]}; do
         liste_pkg_pas_ok=( $pkg )
         # echo -e "$liste_pkg_pas_ok\n"
     fi
-    liste_pkg+=$((liste_pkg_ok))
+    # liste_pkg+=$((liste_pkg_ok))
     
-    
+    for ((i=0; i<${liste_pkg_ok[*]}; ++i ))
+    do
+        echo ${liste_pkg_ok[$i]} >> list
+    done
 
 done
 echo -e "$liste_pkg 2"
