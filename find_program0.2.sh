@@ -9,7 +9,7 @@ liste_pkg_pas_ok=()
 # grep "install ok installed"
 for pkg in ${liste[@]}; do
     
-    check_pkg=$(dpkg-query -W -f='${Status}\n' $pkg 2>/dev/null | awk '{print $3}' )
+    check_pkg=$(dpkg-query -W -f='${Status}' $pkg 2>/dev/null | awk '{print $3}' )
     version_pkg=$(dpkg-query -W -f=' - ${version}' $pkg 2>/dev/null )
     # echo $check_pkg
     
