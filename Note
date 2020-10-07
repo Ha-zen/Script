@@ -1,0 +1,33 @@
+------------------
+A la fin du Script
+------------------
+1. Durant l'utilisation du script (exemple installer programme 1) remplir un fichier texte avec l'action qui a été faite (ex : programme 1 installer)
+le resumé du fichier aurat qu'a afficher le contenue du fichier.
+pour ne pas avoir de pb vider (ou effacer et recreer) en debut de script.
+
+2.
+
+--------------------
+Pendant installation
+--------------------
+recuperer la valeur de la progression (%) et l'envoyer dans la barre d'avancement dialog :
+#!/bin/sh
+DIALOG=${DIALOG=dialog}
+compteur=10
+(
+while test $compteur != 110
+do
+echo $compteur
+echo "XXX"
+echo "Le nouveau\n\message ($compteur pourcent)"
+echo "XXX"
+compteur=`expr $compteur + 10`
+sleep 1
+done
+) |
+$DIALOG --title "Ma barre d'avancement" --gauge "Bonjour, ceci est une barre d'avancement" 20 70 0
+
+
+---------
+*********
+---------
