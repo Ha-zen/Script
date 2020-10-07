@@ -28,7 +28,7 @@ for pkg in ${liste[@]}; do
         # echo -e "$liste_pkg_pas_ok\n"
     fi
 
-    # echo -e "$liste_pkg_pas_ok"\n
+    echo -e "$liste_pkg_ok 2"
     
 
 done
