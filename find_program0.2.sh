@@ -38,7 +38,7 @@ for pkg in ${liste[@]}; do
     done
 
 done
-echo -e "$liste_pkg 2"
+echo -e "$liste_pkg_ok 2"
 # efface les valeurs vide dans la liste $liste_pkg_pas_ok
 # for target in "${vide[@]}"; do
 #   for i in "${!liste_pkg_pas_ok[@]}"; do
