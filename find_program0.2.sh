@@ -29,7 +29,7 @@ for pkg in ${liste[@]}; do
         liste_pkg_pas_ok=( $pkg )
         # echo -e "$liste_pkg_pas_ok\n"
     fi
-    liste_pkg=$((liste_pkg_ok+1))
+    liste_pkg+=$((liste_pkg_ok))
     
     
 
