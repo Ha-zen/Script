@@ -1,8 +1,7 @@
 #!/bin/bash/
 # IFS=
 declare -a liste=( "openssh-server" "sudo" "nessus" )
-liste_pkg_ok=()
-liste_pkg_pas_ok=()
+
 # dpkg-query -W -f='${Status}' $liste
 #check_pkg=$(printf "$pkg" && dpkg-query -W -f=' - ${version} - ${Status}\n' $pkg)
 # grep "install ok installed"
@@ -18,7 +17,8 @@ for pkg in ${liste[@]}; do
     #     echo "$pkg n'est pas installé"
     # fi
 
-
+    liste_pkg_ok=()
+    liste_pkg_pas_ok=()
     if [ "${check_pkg}" == "installed" ]; then
         liste_pkg_ok=( "$pkg $version_pkg" )
     else
