@@ -21,10 +21,11 @@ for pkg in ${liste[@]}; do
 
     if [ "${check_pkg}" == "installed" ]; then
         liste_pkg_ok=( "$pkg $version_pkg" )
+        echo -e "$liste_pkg_ok\n"
     else
         
         liste_pkg_pas_ok=( $pkg )
-        echo -e "$liste_pkg_pas_ok\n"
+        # echo -e "$liste_pkg_pas_ok\n"
     fi
 
     # echo -e "$liste_pkg_pas_ok"\n
