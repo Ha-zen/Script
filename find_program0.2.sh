@@ -1,6 +1,6 @@
 #!/bin/bash/
 # IFS=
-declare -a liste=( "openssh-server" "sudo" "nessus" "docker" )
+declare -a liste=( "openssh-server" "sudo" "sed" "nessus" "docker" )
 vide=()
 liste_pkg_ok=()
 liste_pkg_pas_ok=()
