@@ -18,18 +18,16 @@ for pkg in ${liste[@]}; do
     #     echo "$pkg n'est pas installé"
     # fi
 
-
-
-
-done
-
     if [ "${check_pkg}" == "installed" ]; then
         liste_pkg_ok=( "$pkg $version_pkg" )
     else
         liste_pkg_pas_ok=( "$pkg" )
     fi
 
-    echo -e "$liste_pkg_ok"
+    echo -e "$liste_pkg_pas_ok"
+done
+
+
 
 # echo "$liste_pkg_pas_ok n'est PAS ok"
 # else
