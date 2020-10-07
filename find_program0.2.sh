@@ -1,6 +1,7 @@
 #!/bin/bash/
 # IFS=
 declare -a liste=( "openssh-server" "sudo" "nessus" "docker" )
+vide=()
 liste_pkg_ok=()
 liste_pkg_pas_ok=()
 # dpkg-query -W -f='${Status}' $liste
@@ -24,12 +25,21 @@ for pkg in ${liste[@]}; do
         liste_pkg_pas_ok=( $pkg )
     fi
 
-    echo -e "$liste_pkg_pas_ok"
-    # echo "${(@j./.)liste_pkg_pas_ok:#}"
+    
+    
 
 done
+# efface les valeurs vide dans la liste $liste_pkg_pas_ok
+# for target in "${vide[@]}"; do
+#   for i in "${!liste_pkg_pas_ok[@]}"; do
+#     if [[ ${liste_pkg_pas_ok[i]} = $vide ]]; then
+#       unset 'liste_pkg_pas_ok[i]'
+#     fi
+#   done
+# done
 
-
+echo -e "$liste_pkg_pas_ok"
+# echo "${(@j./.)liste_pkg_pas_ok:#}"
 
 # echo "$liste_pkg_pas_ok n'est PAS ok"
 # else
