@@ -1,21 +1,10 @@
 #!/bin/bash/
+
+# appelle un la variable qui contient le type de système d'initialisation
 . fonctions.sh
 #check_os=$(uname -ar)
 
 declare -a liste=( "openssh-server" "sudo" "tsunami" "nessus" "docker" )
-
-# Page d'introduction
-
-# installation-désintallation
-
-
-
-# Résume des programmes
-
-
-
-
-echo "vous utilisez $systemis"
 
 for pkg in ${liste[@]}; do
     
@@ -33,3 +22,18 @@ for pkg in ${liste[@]}; do
 
     fi
 done
+
+# Page d'introduction
+echo "vous utilisez $systemis"
+# installation-désintallation
+
+
+
+# Résume des programmes
+
+# liste des programmes
+# for i in non_installed_pkg; do
+
+
+
+

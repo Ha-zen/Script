@@ -14,3 +14,19 @@ systemis="init"
 fi
 
 #########################################################
+
+
+# dialog --checklist "liste des programmes à installer"
+#         vide
+#         vide
+#         vide
+#         vide
+#         vide
+#         vide
+#         vide
+#         vide
+#         vide
+#         vide
+#         vide
+#         vide
+
