@@ -1,4 +1,4 @@
-
+#!/bin/bash/
 system=$(ls -l /sbin/init | awk '{print $NF}')
 if [ $system == /lib/systemd/systemd ]; then
 
