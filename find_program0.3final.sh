@@ -1,6 +1,21 @@
 #!/bin/bash/
 
 declare -a liste=( "openssh-server" "sudo" "sed" "nessus" "docker" )
+#check_os=$(uname -ar)
+system=" ls-l /sbin/init | awk '{print $NF}'"
+# if [ $system == /lib/systemd/systemd ]; then
+
+# systemis="systemd"
+
+# elif [$system == /lib/systemd/systemd ]; then
+
+# systemis="init"
+
+# else
+
+# systemis="sysvinit"
+
+# fi
 
 for pkg in ${liste[@]}; do
     
@@ -14,7 +29,7 @@ for pkg in ${liste[@]}; do
         echo -e "No need to install $pkg $(dpkg-query -W -f='- ${version}' $pkg)" >> installed_pkg
 
     else
-        echo " Install le PUTAIN de $pkg" >> non_installed_pkg
+        echo " Install de $pkg" >> non_installed_pkg
 
     fi
 done
