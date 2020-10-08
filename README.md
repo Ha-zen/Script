@@ -32,3 +32,7 @@ https://stackoverflow.com/questions/1298066/check-if-an-apt-get-package-is-insta
 
 
 dpkg-query -W -f='${Status}' nmap | grep -q -P '^install ok installed$'; echo $?
+
+Clément insiste pour intégrer ce lien : https://github.com/hack4liberty/tsunami-install-script
+
+Voilà qui est fait.
