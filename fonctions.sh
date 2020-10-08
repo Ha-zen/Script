@@ -1,4 +1,7 @@
 #!/bin/bash/
+
+#########################################################
+# fonction qui trouve le type système d'initialisation sur la machine
 system=$(ls -l /sbin/init | awk '{print $NF}')
 if [ $system == /lib/systemd/systemd ]; then
 
@@ -10,4 +13,4 @@ systemis="init"
 
 fi
 
-echo $systemis >> systemis.txt
+#########################################################
