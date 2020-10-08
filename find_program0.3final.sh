@@ -15,10 +15,10 @@ for pkg in ${liste[@]}; do
 
     if [ "${check_pkg}" == "installed" ]; then
 
-        echo -e "No need to install $pkg $(dpkg-query -W -f='- ${version}' $pkg)" >> installed_pkg
+        echo -e "No need to install $pkg $(dpkg-query -W -f='- ${version}' $pkg)" >> /tmp/installed_pkg
 
     else
-        echo " Install de $pkg" >> non_installed_pkg
+        echo "Install de $pkg" >> /tmp/non_installed_pkg
 
     fi
 done
