@@ -46,7 +46,7 @@ clear
 if [ $? -eq 0 ]; then # Exit with OK
     readlink -f $(more /tmp/liste | sed -n "echo "$FILE p" | sed 's/ //'")
 fi
-# for i in non_installed_pkg; do
+
 
 
 
