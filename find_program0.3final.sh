@@ -13,6 +13,8 @@ systemis="init"
 
 fi
 
+echo "vous utilisez $systemis"
+
 for pkg in ${liste[@]}; do
     
     check_pkg=$(dpkg-query -W -f='${Status}' $pkg 2>/dev/null | awk '{print $3}' )
