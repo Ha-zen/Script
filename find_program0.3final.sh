@@ -1,5 +1,8 @@
 #!/bin/bash/
+. fonctions.sh
+#check_os=$(uname -ar)
 
+declare -a liste=( "openssh-server" "sudo" "tsunami" "nessus" "docker" )
 
 # Page d'introduction
 
@@ -7,12 +10,10 @@
 
 
 
-
 # Résume des programmes
 
 
-declare -a liste=( "openssh-server" "sudo" "tsunami" "nessus" "docker" )
-#check_os=$(uname -ar)
+
 
 echo "vous utilisez $systemis"
 
