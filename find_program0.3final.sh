@@ -2,20 +2,16 @@
 
 declare -a liste=( "openssh-server" "sudo" "sed" "nessus" "docker" )
 #check_os=$(uname -ar)
-system=" ls-l /sbin/init | awk '{print $NF}'"
-# if [ $system == /lib/systemd/systemd ]; then
+system=$(ls -l /sbin/init | awk '{print $NF}')
+if [ $system == /lib/systemd/systemd ]; then
 
-# systemis="systemd"
+systemis="systemd"
 
-# elif [$system == /lib/systemd/systemd ]; then
+else
 
-# systemis="init"
+systemis="init"
 
-# else
-
-# systemis="sysvinit"
-
-# fi
+fi
 
 for pkg in ${liste[@]}; do
     
