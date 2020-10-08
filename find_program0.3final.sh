@@ -1,17 +1,18 @@
 #!/bin/bash/
 
-declare -a liste=( "openssh-server" "sudo" "sed" "nessus" "docker" )
+
+# Page d'introduction
+
+# installation-désintallation
+
+
+
+
+# Résume des programmes
+
+
+declare -a liste=( "openssh-server" "sudo" "tsunami" "nessus" "docker" )
 #check_os=$(uname -ar)
-system=$(ls -l /sbin/init | awk '{print $NF}')
-if [ $system == /lib/systemd/systemd ]; then
-
-systemis="systemd"
-
-else
-
-systemis="init"
-
-fi
 
 echo "vous utilisez $systemis"
 
