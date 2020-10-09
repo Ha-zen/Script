@@ -13,7 +13,7 @@
 #     readlink -f $(more /tmp/liste | sed -n "echo "$FILE p" | sed 's/ //'")
 # fi
 
-local LIST=() 
+LIST=() 
 
 mapfile -t LIST < /tmp/liste
 
