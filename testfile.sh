@@ -13,9 +13,9 @@
 #     readlink -f $(more /tmp/liste | sed -n "echo "$FILE p" | sed 's/ //'")
 # fi
 
-LIST=() 
+LIST=(/tmp/liste) 
 
-mapfile -t LIST < /tmp/liste
+# mapfile -t LIST < /tmp/liste
 
 echo "$LIST"
                                                                                                                                                                                                                                
