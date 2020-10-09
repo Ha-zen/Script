@@ -24,7 +24,7 @@
 LIST=("nessus" "docker" "elvire" "jemais")   
                                                                                                                                                                                                                          
 for item in LIST; do
-  LIST+=( $( $item ) off )
+  LIST+=( $( $item ) "" off )
 done
 local script
 script=$( dialog --backtitle "NextCloudPi configuration" \
