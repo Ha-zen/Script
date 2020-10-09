@@ -23,4 +23,4 @@ script=$( dialog --backtitle "NextCloudPi configuration" \
                  --radiolist "Select program to configure and activate:" 20 80 10 \
                  "${LIST[@]}" \
           3>&1 1>&2 2>&3 )
-echo "$script was selected"
+echo $script
