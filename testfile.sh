@@ -24,10 +24,10 @@
 LIST=("nessus" "docker" "elvire" "jemais")   
                                                                                                                                                                                                                          
 for item in LIST; do
-  LIST+=( $( $item ) "" off )
+  LIST+=( $( $item ) "description" off )
 done
 local script
-script=$( dialog --backtitle "NextCloudPi configuration" \
+script=$( dialog --backtitle "INFRASEC configuration" \
                  --checklist "Select program to configure and activate:" 20 80 10 \
                  "${LIST[@]}" \
           3>&1 1>&2 2>&3 )

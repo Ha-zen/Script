@@ -38,7 +38,7 @@ while read -r line; do # process file by file
     let i=$i+1
     W+=($i "$line")
 done < <( more /tmp/liste )
-FILE=$(dialog --title "List file of directory /home" --menu "Chose one" 24 80 17 "${W[@]}" 3>&2 2>&1 1>&3) # show dialog and store output
+FILE=$(dialog --title "List file of directory /home" --menu   "Chose one" 24 80 17 "${W[@]}" 3>&2 2>&1 1>&3) # show dialog and store output
 clear
 
 
