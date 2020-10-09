@@ -13,14 +13,18 @@
 #     readlink -f $(more /tmp/liste | sed -n "echo "$FILE p" | sed 's/ //'")
 # fi
 
+local LIST=() 
 
-local LIST=()                                                                                                                                                                                                                                
-for item in /tmp/liste; do
-  LIST+=( $( $item ) off )
-done
-local script
-script=$( dialog --backtitle "NextCloudPi configuration" \
-                 --radiolist "Select program to configure and activate:" 20 80 10 \
-                 "${LIST[@]}" \
-          3>&1 1>&2 2>&3 )
-echo $script
+mapfile -t LIST < /tmp/liste
+
+echo "$LIST"
+                                                                                                                                                                                                                               
+# for item in LIST; do
+#   LIST+=( $( $item ) off )
+# done
+# local script
+# script=$( dialog --backtitle "NextCloudPi configuration" \
+#                  --radiolist "Select program to configure and activate:" 20 80 10 \
+#                  "${LIST[@]}" \
+#           3>&1 1>&2 2>&3 )
+# echo "$script was selected"
