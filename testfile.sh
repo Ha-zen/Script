@@ -24,7 +24,7 @@
 LIST=("nessus" "docker" "elvire" "jemais")   
                                                                                                                                                                                                                          
 for item in LIST; do
-  LIST+=( $( $item ) "description" off )
+  LIST+=( $( $item "description" )  off )
 done
 local script
 script=$( dialog --backtitle "INFRASEC configuration" \
