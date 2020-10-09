@@ -16,18 +16,19 @@
 
 
 # mapfile -t LIST < /tmp/liste
-LIST=()
-while IFS= read -r line; do
-  LIST+=("$line")
-done < /tmp/liste
-echo "$LIST"
-                                                                                                                                                                                                                               
-# for item in LIST; do
-#   LIST+=( $( $item ) off )
-# done
-# local script
-# script=$( dialog --backtitle "NextCloudPi configuration" \
-#                  --radiolist "Select program to configure and activate:" 20 80 10 \
-#                  "${LIST[@]}" \
-#           3>&1 1>&2 2>&3 )
-# echo "$script was selected"
+
+# while IFS= read -r line; do
+#   LIST+=("$line")
+# done < /tmp/liste
+# echo "$LIST"
+LIST=("nessus" "docker" "elvire" "jemais")   
+                                                                                                                                                                                                                         
+for item in LIST; do
+  LIST+=( $( $item ) off )
+done
+local script
+script=$( dialog --backtitle "NextCloudPi configuration" \
+                 --radiolist "Select program to configure and activate:" 20 80 10 \
+                 "${LIST[@]}" \
+          3>&1 1>&2 2>&3 )
+echo "$script was selected"
