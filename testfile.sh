@@ -21,14 +21,23 @@
 #   LIST+=("$line")
 # done < /tmp/liste
 # echo "$LIST"
-LIST=("nessus" "docker" "elvire" "jemais")   
-                                                                                                                                                                                                                         
-for item in LIST; do
-  LIST+=( $( $item ) "aaa" off )
+function tab(){
+
+package=("nessus" "docker" "elvire" "jemais")
+desc=("aaa" "bbb" "ccc" "ddd")
+len=${#package[@]}
+
+list=()
+for (( i=0; i<$len; i++ ));
+do
+  list+=("${package[i]}" "${desc[i]}" off)
 done
-local script
+
 script=$( dialog --backtitle "INFRASEC configuration" \
                  --checklist "Select program to configure and activate:" 20 80 10 \
-                 "${LIST[@]}" \
+                 "${list[@]}" \
           3>&1 1>&2 2>&3 )
-# echo "$script was selected"
+ echo "$script was selected"
+
+}
+tab
