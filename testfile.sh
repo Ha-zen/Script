@@ -13,10 +13,13 @@
 #     readlink -f $(more /tmp/liste | sed -n "echo "$FILE p" | sed 's/ //'")
 # fi
 
-LIST=(/tmp/liste) 
+
 
 # mapfile -t LIST < /tmp/liste
-
+LIST=()
+while IFS= read -r line; do
+  LIST+=("$line")
+done < /tmp/liste
 echo "$LIST"
                                                                                                                                                                                                                                
 # for item in LIST; do
